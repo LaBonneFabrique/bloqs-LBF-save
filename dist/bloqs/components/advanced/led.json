@@ -1,0 +1,72 @@
+{
+  "type": "statement",
+  "name": "ledAdvanced",
+  "connectors": [
+    {
+      "type": "connector--top",
+      "accept": "connector--bottom"
+    },
+    {
+      "type": "connector--bottom",
+      "accept": "connector--top"
+    },
+    {
+      "type": "connector--input",
+      "accept": "connector--output",
+      "acceptType": [
+        "all"
+      ],
+      "suggestedBloqs": [
+        "hwVariable",
+        "selectVariable"
+      ],
+      "name": "7e5f4f8f-1d7f-4dc2-9f1d-808c862ea197"
+    }
+  ],
+  "bloqClass": "bloq-led-advanced",
+  "content": [
+    [
+      {
+        "id": "STATE",
+        "alias": "staticDropdown",
+        "options": [
+          {
+            "label": "bloq-led-advanced-turnon",
+            "value": "HIGH"
+          },
+          {
+            "label": "bloq-led-advanced-turnoff",
+            "value": "LOW"
+          }
+        ]
+      },
+      {
+        "alias": "text",
+        "value": "bloq-led-advanced-theLED"
+      },
+      {
+        "bloqInputId": "LED",
+        "alias": "bloqInput",
+        "acceptType": [
+          "all"
+        ],
+        "suggestedBloqs": [
+          "hwVariable",
+          "selectVariable"
+        ],
+        "name": "7e5f4f8f-1d7f-4dc2-9f1d-808c862ea197"
+      }
+    ]
+  ],
+  "code": "digitalWrite({LED},{STATE});",
+  "arduino": {
+    "code": "digitalWrite({LED},{STATE});"
+  },
+  "python": {
+    "codeLines": [
+      {
+        "code": "Bloque \"ledAdvanced\" no preparado para generar código python"
+      }
+    ]
+  }
+}

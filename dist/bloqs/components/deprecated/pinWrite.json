@@ -1,0 +1,70 @@
+{
+  "type": "statement",
+  "name": "pinWriteAdvanced",
+  "connectors": [
+    {
+      "type": "connector--top",
+      "accept": "connector--bottom"
+    },
+    {
+      "type": "connector--bottom",
+      "accept": "connector--top"
+    },
+    {
+      "type": "connector--input",
+      "accept": "connector--output",
+      "acceptType": [
+        "all"
+      ],
+      "name": "1404bd26-6ac3-4e0a-859f-103418c39070"
+    },
+    {
+      "type": "connector--input",
+      "accept": "connector--output",
+      "acceptType": [
+        "all"
+      ],
+      "name": "35828b66-ff08-4373-97f1-ff364cd59b4f"
+    }
+  ],
+  "bloqClass": "bloq-pin-writte-advanced",
+  "content": [
+    [
+      {
+        "alias": "text",
+        "value": "bloq-pin-writte-advanced-writepin"
+      },
+      {
+        "bloqInputId": "PIN",
+        "alias": "bloqInput",
+        "acceptType": [
+          "all"
+        ],
+        "name": "1404bd26-6ac3-4e0a-859f-103418c39070"
+      },
+      {
+        "alias": "text",
+        "value": "bloq-pin-writte-advanced-data"
+      },
+      {
+        "bloqInputId": "DATA",
+        "alias": "bloqInput",
+        "acceptType": [
+          "all"
+        ],
+        "name": "35828b66-ff08-4373-97f1-ff364cd59b4f"
+      }
+    ]
+  ],
+  "code": "'{PIN}'.indexOf('A') === 0 ? 'analogWrite({PIN},{DATA});' : 'digitalWrite({PIN},{DATA});'",
+  "arduino": {
+    "code": "digitalWrite({PIN},{DATA});"
+  },
+  "python": {
+    "codeLines": [
+      {
+        "code": "Bloque \"pinWriteAdvanced\" no preparado para generar código python"
+      }
+    ]
+  }
+}

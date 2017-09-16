@@ -1,0 +1,44 @@
+{
+  "type": "statement",
+  "name": "audioWave",
+  "connectors": [
+    {
+      "type": "connector--top",
+      "accept": "connector--bottom"
+    },
+    {
+      "type": "connector--bottom",
+      "accept": "connector--top"
+    }
+  ],
+  "bloqClass": "bloq-zowi-gestures",
+  "content": [
+    [
+      {
+        "alias": "text",
+        "value": "audioWave"
+      },
+      {
+        "id": "NAME",
+        "alias": "varInput",
+        "placeholder": "bloq-audioWave-default"
+      }
+    ]
+  ],
+  "createDynamicContent": "audios",
+  "returnType": {
+    "type": "simple",
+    "value": "audio"
+  },
+  "arduino": {
+    "code": "AudioSynthWaveformSine sine{NAME};AudioSynthWaveformDc dc{NAME}; AudioEffectMultiply multiply{NAME};AudioConnection patchCordSine{NAME}(sine{NAME}, 0, multiply{NAME}, 0);AudioConnection patchCorddc{NAME}(dc{NAME}, 0, multiply{NAME}, 1);",
+    "setupExtraCode": "sine{NAME}.amplitude(0.125);sine{NAME}.frequency(440);dc{NAME}.amplitude(0);"
+  },
+  "python": {
+    "codeLines": [
+      {
+        "code": "Bloque \"audioWave\" no preparado para generar código python"
+      }
+    ]
+  }
+}

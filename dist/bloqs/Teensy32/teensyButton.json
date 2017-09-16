@@ -1,0 +1,44 @@
+{
+  "type": "output",
+  "name": "teensyButton",
+  "connectors": [
+    {
+      "type": "connector--output",
+      "accept": "connector--input"
+    }
+  ],
+  "bloqClass": "bloq-zowi-gestures",
+  "content": [
+    [
+      {
+        "alias": "text",
+        "value": "le bouton"
+      },
+      {
+        "id": "BOUTON",
+        "alias": "dynamicDropdown",
+        "options": "teensyButtons"
+      }
+    ]
+  ],
+  "arduino": {
+    "includes": [
+      "Bounce.h"
+    ],
+    "needInstanceOf": [
+      {
+        "name": "{BOUNCEBUTTON}",
+        "type": "Bounce",
+        "equals": "Bounce({BOUTON}.pin.s],15)"
+      }
+    ],
+    "code": ""
+  },
+  "python": {
+    "codeLines": [
+      {
+        "code": "Bloque \"teensyButton\" no preparado para generar código python"
+      }
+    ]
+  }
+}

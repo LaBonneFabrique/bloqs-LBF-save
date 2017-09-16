@@ -1,0 +1,49 @@
+{
+  "type": "output",
+  "name": "teensyTouchPad",
+  "connectors": [
+    {
+      "type": "connector--output",
+      "accept": "connector--input"
+    }
+  ],
+  "bloqClass": "bloq-zowi-gestures",
+  "content": [
+    [
+      {
+        "alias": "text",
+        "value": "read the touch"
+      },
+      {
+        "id": "TOUCHPIN",
+        "alias": "dynamicDropdown",
+        "options": "touchpads"
+      }
+    ]
+  ],
+  "returnType": {
+    "type": "simple",
+    "value": "float"
+  },
+  "arduino": {
+    "includes": [
+      "Audio.h",
+      "Wire.h"
+    ],
+    "needInstanceOf": [
+      {
+        "name": "{TOUCHPIN}",
+        "type": "const int",
+        "equals": "º[{TOUCHPIN}.pin.s]"
+      }
+    ],
+    "code": "touchRead({TOUCHPIN})"
+  },
+  "python": {
+    "codeLines": [
+      {
+        "code": "{VALUE}"
+      }
+    ]
+  }
+}

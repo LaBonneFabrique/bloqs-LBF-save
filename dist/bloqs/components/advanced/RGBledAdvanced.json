@@ -1,0 +1,123 @@
+{
+  "type": "statement",
+  "name": "rgbLedAdvanced",
+  "connectors": [
+    {
+      "type": "connector--top",
+      "accept": "connector--bottom"
+    },
+    {
+      "type": "connector--bottom",
+      "accept": "connector--top"
+    },
+    {
+      "type": "connector--input",
+      "accept": "connector--output",
+      "acceptType": [
+        "all"
+      ],
+      "suggestedBloqs": [
+        "number",
+        "selectVariable"
+      ],
+      "name": "62b16a38-7f4d-4d06-be0b-6051e8d393e5"
+    },
+    {
+      "type": "connector--input",
+      "accept": "connector--output",
+      "acceptType": [
+        "all"
+      ],
+      "suggestedBloqs": [
+        "number",
+        "selectVariable"
+      ],
+      "name": "0816d877-56cd-4990-8d63-5c5bcc7716ed"
+    },
+    {
+      "type": "connector--input",
+      "accept": "connector--output",
+      "acceptType": [
+        "all"
+      ],
+      "suggestedBloqs": [
+        "number",
+        "selectVariable"
+      ],
+      "name": "ab105070-dbca-45db-8787-8c01559ba503"
+    }
+  ],
+  "bloqClass": "bloq-rgbLed-advanced",
+  "content": [
+    [
+      {
+        "alias": "text",
+        "value": "bloq-rgbLed"
+      },
+      {
+        "id": "LED",
+        "alias": "dynamicDropdown",
+        "options": "rgbs"
+      },
+      {
+        "alias": "text",
+        "value": "bloq-rgbLed-red"
+      },
+      {
+        "bloqInputId": "RED",
+        "alias": "bloqInput",
+        "acceptType": [
+          "all"
+        ],
+        "suggestedBloqs": [
+          "number",
+          "selectVariable"
+        ],
+        "name": "62b16a38-7f4d-4d06-be0b-6051e8d393e5"
+      },
+      {
+        "alias": "text",
+        "value": "bloq-rgbLed-green"
+      },
+      {
+        "bloqInputId": "GREEN",
+        "alias": "bloqInput",
+        "acceptType": [
+          "all"
+        ],
+        "suggestedBloqs": [
+          "number",
+          "selectVariable"
+        ],
+        "name": "0816d877-56cd-4990-8d63-5c5bcc7716ed"
+      },
+      {
+        "alias": "text",
+        "value": "bloq-rgbLed-blue"
+      },
+      {
+        "bloqInputId": "BLUE",
+        "alias": "bloqInput",
+        "acceptType": [
+          "all"
+        ],
+        "suggestedBloqs": [
+          "number",
+          "selectVariable"
+        ],
+        "name": "ab105070-dbca-45db-8787-8c01559ba503"
+      }
+    ]
+  ],
+  "code": "{LED}.setRGBcolor({RED},{GREEN},{BLUE});",
+  "arduino": {
+    "code": "{LED}.setRGBcolor({RED},{GREEN},{BLUE});"
+  },
+  "python": {
+    "codeLines": [
+      {
+        "code": "Bloque \"rgbLedAdvanced\" no preparado para generar código python"
+      }
+    ]
+  }
+}

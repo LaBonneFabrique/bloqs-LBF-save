@@ -1,0 +1,75 @@
+{
+  "type": "output",
+  "name": "arrayVariableAdvanced",
+  "connectors": [
+    {
+      "type": "connector--output",
+      "accept": "connector--input"
+    },
+    {
+      "type": "connector--input",
+      "accept": "connector--output",
+      "acceptType": [
+        "all"
+      ],
+      "suggestedBloqs": [
+        "number",
+        "string",
+        "selectVariable"
+      ],
+      "name": "f392780f-cc4d-478f-ad77-dd86a514b819"
+    }
+  ],
+  "bloqClass": "bloq-array-variable",
+  "content": [
+    [
+      {
+        "alias": "text",
+        "value": "bloq-array-variable-variable"
+      },
+      {
+        "id": "VAR",
+        "alias": "dynamicDropdown",
+        "options": "softwareVars"
+      },
+      {
+        "alias": "text",
+        "value": "["
+      },
+      {
+        "bloqInputId": "POSITION",
+        "alias": "bloqInput",
+        "acceptType": [
+          "all"
+        ],
+        "suggestedBloqs": [
+          "number",
+          "string",
+          "selectVariable"
+        ],
+        "name": "f392780f-cc4d-478f-ad77-dd86a514b819"
+      },
+      {
+        "alias": "text",
+        "value": "]"
+      }
+    ]
+  ],
+  "code": "{VAR}[{POSITION}]",
+  "returnType": {
+    "type": "fromDynamicDropdown",
+    "idDropdown": "VAR",
+    "pointer": "true",
+    "options": "softwareVars"
+  },
+  "arduino": {
+    "code": "{VAR}[{POSITION}]"
+  },
+  "python": {
+    "codeLines": [
+      {
+        "code": "Bloque \"arrayVariableAdvanced\" no preparado para generar código python"
+      }
+    ]
+  }
+}
